@@ -1,5 +1,7 @@
 # macOS minimalist Development Setup
 
+<img src="./assets/macos.png" width="80" alt="macOS">
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 After 15 years of using Windows I migrated to macOS. I started to do some research about how to setup a dev environment mostly for web development: PHP, Javascript & Node. Not super complex, no crazy dev ops, no extensive use of the terminal nor a lot of automation.
@@ -24,7 +26,7 @@ Primitives:
 - Helping to create sustainable productivity: notion
 
 ## Getting Started
-Plug in your brand new mac, select your language, time zone, Apple ID, and so on. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
+Plug in your new or wiped computer. Follow the installation process. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
 ## Command Line Tools
 ```bash
 xcode-select --install
@@ -36,7 +38,8 @@ The Command Line Tools are installed at:
 ```
 
 ## Homebrew
-[logo]: https://brew.sh/assets/img/homebrew-256x256.png "Logo Title Text 2"
+<img src="./assets/homebrew.png" width="80" alt="Homebrew">
+
 Install Homebrew package manager: it will allow you to install, uninstall and manage packages/apps from the command line.
 
 ```bash
@@ -81,6 +84,7 @@ brew install visual-studio-code
 - Visual Studio Code for JAMPP development
 
 ## Git & SSH
+<img src="./assets/macos.png" width="80" alt="git">
 This config will help to have a global setup for git.
 
 1. Create a git config file
@@ -187,7 +191,7 @@ Echoing $NVM_DIR should now return your NVM directory
 
 ```bash
 $ echo $NVM_DIR
-/Users/spaceman/.nvm
+/Users/username/.nvm
 ```
 
 Install latest node stable version
