@@ -29,7 +29,7 @@ Primitives:
 Plug in your new or wiped computer. Follow the installation process. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
 ## Command Line Tools
 ```bash
-xcode-select --install
+$ xcode-select --install
 ```
 
 The Command Line Tools are installed at:
@@ -43,14 +43,14 @@ The Command Line Tools are installed at:
 Install Homebrew package manager: it will allow you to install, uninstall and manage packages/apps from the command line.
 
 ```bash
-bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+$ bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ## Tools
 I will install git, github cli yarn and make with homebrew.
 
 ```bash
-brew install \
+$ brew install \
   git \
   gh \
   yarn \
@@ -59,17 +59,19 @@ brew install \
 
 ## Apps
 Must use apps for my development workflow.
+
+<img src="./assets/alfred.jpg" width="60" alt="Alfred"><img src="./assets/firefox.jpg" width="60" alt="Firefox"><img src="./assets/chrome.jpg" width="60" alt="Chrome"><img src="./assets/rectangle.jpg" width="60" alt="Rectangle"><img src="./assets/phpstorm.png" width="60" alt="Phpstorm"><img src="./assets/local.png" width="60" alt="Local"><img src="./assets/notion.png" width="60" alt="Notion"><img src="./assets/vscode.png" width="60" alt="VS Code">
 ```bash
-brew install alfred
-brew install firefox
-brew install google-chrome
-brew install rectangle
-brew install phpstorm
-brew install local
-brew install notion
-brew install postgres
-brew install postico
-brew install visual-studio-code
+$ brew install alfred
+$ brew install firefox
+$ brew install google-chrome
+$ brew install rectangle
+$ brew install phpstorm
+$ brew install local
+$ brew install notion
+$ brew install postgres
+$ brew install postico
+$ brew install visual-studio-code
 ```
 
 - Alfred is kind a replacement for Spotlight
@@ -84,7 +86,7 @@ brew install visual-studio-code
 - Visual Studio Code for JAMPP development
 
 ## Git & SSH
-<img src="./assets/macos.png" width="80" alt="git">
+<img src="./assets/git.png" width="80" alt="git">
 This config will help to have a global setup for git.
 
 1. Create a git config file
@@ -164,25 +166,25 @@ Installing Node globally is a *bad practice*. You should install Node using nvm 
 I will install it using Homebrew.
 
 ```
-brew install nvm
+$ brew install nvm
 ```
 
 Create a directory for NVM
 
 ```
-mkdir ~/.nvm
+$ mkdir ~/.nvm
 ```
 
 Open zsh config file
 
 ```bash
-open ~/.zshrc
+$ open ~/.zshrc
 ```
 
 Add nvm config
 ```bash
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+$ export NVM_DIR=~/.nvm
+$ source $(brew --prefix nvm)/nvm.sh
 ```
 
 ***Close the terminal and reopen it to reload config***
@@ -196,13 +198,13 @@ $ echo $NVM_DIR
 
 Install latest node stable version
 ```
-nvm install node
+$ nvm install node
 ```
 
 Verify node installation
 
 ```
-node -v && npm -v
+$ node -v && npm -v
 ```
 
 ## macOS Settings
