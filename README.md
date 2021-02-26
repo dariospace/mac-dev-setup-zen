@@ -19,25 +19,68 @@ This guide is here to help my future self in case I wipe my computer or buy a ne
 ## Getting Started
 Plug in your brand new mac, select your language, time zone, Apple ID, and so on. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
 ## Command Line Tools
-```xcode-select --install```
+```bash
+xcode-select --install
+```
 
 The Command Line Tools are installed at:
-```/Library/Developer/CommandLineTools/```
+```bash
+/Library/Developer/CommandLineTools/
+```
 
 ## Homebrew
 Install Homebrew package manager: it will allow you to install, uninstall and manage packages/apps from the command line.
 
-``` bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" ```
+```bash
+bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
+```
+
+## Tools
+I will install git, github cli yarn and make with homebrew.
+
+```bash
+brew install \
+  git \
+  gh \
+  yarn \
+  make
+```
+
+## Apps
+Must use apps for my development workflow. 
+```bash
+brew install alfred  
+brew install firefox 
+brew install google-chrome 
+brew install rectangle 
+brew install phpstorm
+brew install postgres 
+brew install postico 
+brew install visual-studio-code
+```
+
+- Alfred is kind a replacement for Spotlight
+- Firefox for Browsing
+- Chrome for Development
+- Rectangle for window management using keyboard shortcuts
+- Phpstorm for PHP/Wordpress development
+- Postgres
+- Postico is a GUI to manage postgres DB
+- Visual Studio Code for JAMPP development
 
 ## Node.js
 Installing Node globally is a *bad practice*. You should install Node using nvm (Node Version Manager) or another version manager. nvm allows you to easily switch between Node versions, which is essential when you work in different projects. 
 I will install it using Homebrew.
 
-```brew install nvm```
+```
+brew install nvm
+```
 
 Create a directory for NVM
 
-`mkdir ~/.nvm`
+```
+mkdir ~/.nvm
+```
 
 Open zsh config file
 
@@ -60,5 +103,13 @@ $ echo $NVM_DIR
 /Users/spaceman/.nvm
 ```
 
+Tnstall latest node stable version
+```
+nvm install node
+```
 
+Verify node installation
 
+```
+node -v && npm -v
+```
