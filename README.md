@@ -1,11 +1,13 @@
-## A macOS Minimalist Development Setup
+# macOS minimalist Development Setup
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 After 15 years of using Windows I migrated to macOS. I started to do some research about how to setup a dev environment mostly for web development: PHP, Javascript & Node. Not super complex, no crazy dev ops, no extensive use of the terminal nor a lot of automation.
 
-I found awesome github repos and tutorials with information, automated install scripts and dozens of tools. 
+I found awesome github repos and tutorials with information, automated install scripts and dozens of tools.
 I started with the setup.
 
-> It took me 2 days.  
+> It took me 2 days.
 
 ---
 
@@ -13,7 +15,7 @@ I started with the setup.
 I meditate on a daily basis and I practice minimalism. Use and keep only what you need at a certain time.
 
 ## I created this guide to setup a macOS Zen Development Environment which can grow and shrink as needed
-Goal: This guide is here to help my future self in case I wipe my computer or buy a new one and to help others with a similar approach. 
+Goal: This guide is here to help my future self in case I wipe my computer or buy a new one and to help others with a similar approach.
 
 Primitives:
 - Having a maintainable guide to install a mac development environment in a new or wiped machine without thinking nor searching in Google for solutions
@@ -34,10 +36,11 @@ The Command Line Tools are installed at:
 ```
 
 ## Homebrew
+[logo]: https://brew.sh/assets/img/homebrew-256x256.png "Logo Title Text 2"
 Install Homebrew package manager: it will allow you to install, uninstall and manage packages/apps from the command line.
 
 ```bash
-bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
+bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ## Tools
@@ -52,16 +55,17 @@ brew install \
 ```
 
 ## Apps
-Must use apps for my development workflow. 
+Must use apps for my development workflow.
 ```bash
-brew install alfred  
-brew install firefox 
-brew install google-chrome 
-brew install rectangle 
+brew install alfred
+brew install firefox
+brew install google-chrome
+brew install rectangle
 brew install phpstorm
 brew install local
-brew install postgres 
-brew install postico 
+brew install notion
+brew install postgres
+brew install postico
 brew install visual-studio-code
 ```
 
@@ -71,6 +75,7 @@ brew install visual-studio-code
 - Rectangle for window management using keyboard shortcuts
 - Phpstorm for PHP/Wordpress development
 - Local by Flywheel for Wordpress development
+- Notion
 - Postgres
 - Postico is a GUI to manage postgres DB
 - Visual Studio Code for JAMPP development
@@ -90,7 +95,7 @@ $ touch ~/.gitconfig # Creates the config file
 $ open ~/.gitconfig  # Opens the config file
 ```
 
-Add this to the git config file to set up some shortcuts and defaults. 
+Add this to the git config file to set up some shortcuts and defaults.
 I have set my email address in github to be private so in the email field it should be set the noreply github email alias. More info [here](https://github.com/dwyl/dev-setup/issues/22)
 ```text
 [alias]
@@ -131,7 +136,7 @@ $ open  ~/.ssh/config  # Opens the config file
 ```
 
 Add this to the config file. Save and close.
-```  
+```
  Host *
     AddKeysToAgent yes
     UseKeychain no
@@ -143,7 +148,7 @@ Generate a SSH key. If you are not sharing the key set the passphrase to none. L
 $ ssh-keygen -t rsa -b 4096 -C "email@example.com"
 ```
 
-Add the SSH key 
+Add the SSH key
 ```bash
 $ ssh-add -K ~/.ssh/id_rsa
 ```
@@ -151,7 +156,7 @@ $ ssh-add -K ~/.ssh/id_rsa
 4. I use Github so future me, follow the github steps to add the SSH key [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
 
 ## Node.js
-Installing Node globally is a *bad practice*. You should install Node using nvm (Node Version Manager) or another version manager. nvm allows you to easily switch between Node versions, which is essential when you work in different projects. 
+Installing Node globally is a *bad practice*. You should install Node using nvm (Node Version Manager) or another version manager. nvm allows you to easily switch between Node versions, which is essential when you work in different projects.
 I will install it using Homebrew.
 
 ```
@@ -195,3 +200,52 @@ Verify node installation
 ```
 node -v && npm -v
 ```
+
+## macOS Settings
+Personal preferences on how to set up masOS. It is up to you.
+## Default Commands
+    # Show path bar
+    defaults write com.apple.finder ShowPathbar -bool true
+
+    # Show status bar
+    defaults write com.apple.finder ShowStatusBar -bool true
+### Dock
+    Hide dock automatically.
+### Sharing
+    Change compauter name > Use something that cannot be matched to tour computed visually
+### Security
+    Security & Privacy > General > Require password immediately after sleep or screen saver begins.
+    Security & Privacy > FileVault > Set it to enabled.
+    iCloud > I do not use iCloud.
+    Users & Groups > Setup a password if you did not setup one during installation.
+### System
+    Dock > Automatically hide and show the Dock
+    Keyboard > Key Repeat > Fast (all the way to the right)
+    Keyboard > Delay Until Repeat > Short (all the way to the right)
+    Keyboard > Text > Disable "Correct spelling automatically"
+    Keyboard > Text > Disable "Capitalize words automatically"
+    Keyboard > Text > Disable "Add period with double-space"
+    Trackpad > Enable "Tap to click"
+
+## App Settings
+### Visual Studio Code
+    # Path
+    Press CMD + SHIFT + P and click "Install code command in PATH"
+
+    # Preferences
+    "editor.tabSize": 2
+    "editor.rulers": [80]
+
+    # Extensions
+    ESlint
+    Gitlens
+    Highlight Matching Tag
+    Prettier
+
+    # Theme
+    Visual Studio Dark Theme
+
+## Contributing
+Found mistakes? Improvements? Caveats? Outdated commands? Let me know with a pull request.
+## License
+MIT ot Public Domain. Whatever.
