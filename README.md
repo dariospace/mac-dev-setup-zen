@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-After 15 years of using Windows I migrated to macOS. I started to do some research about how to setup a dev environment mostly for web development: PHP, Javascript & Node. Not super complex, no crazy dev ops, no extensive use of the terminal nor a lot of automation.
+After 20 years of using Windows I migrated to macOS. I started to do some research about how to setup a dev environment mostly for web development: PHP, Javascript & Node. Not super complex, no crazy dev ops, no extensive use of the terminal nor a lot of automation.
 
 I found awesome github repos and tutorials with information, automated install scripts and dozens of tools.
 I started with the setup.
@@ -12,18 +12,20 @@ I started with the setup.
 > It took me 2 days.
 
 ---
-
 ## I realized I needed something simpler
 I meditate on a daily basis and I practice minimalism. Use and keep only what you need at a certain time.
 
 ## I created this guide to setup a macOS Zen Development Environment which can grow and shrink as needed
-Goal: This guide is here to help my future self in case I wipe my computer or buy a new one and to help others with a similar approach.
+Goal: This guide is here to help my future self in case I wipe my computer or buy a new one. It is also to help others with a similar approach about setting up a development environment.
 
 Primitives:
 - Having a maintainable guide to install a mac development environment in a new or wiped machine without thinking nor searching in Google for solutions
 - Being able to install / uninstall anything without globals nor affecting Projects
 - Avoiding to install any app that can be used in the browser: slack, spotify, gmail, google drive, etc ***unless***:
 - Helping to create sustainable productivity: notion
+## Screenshots
+<img src="./assets/desktop.png" width="800" alt="macOS"><img src="./assets/finder.png" width="800" alt="macOS">
+
 
 ## Getting Started
 Plug in your new or wiped computer. Follow the installation process. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
@@ -32,10 +34,20 @@ Plug in your new or wiped computer. Follow the installation process. The first t
 $ xcode-select --install
 ```
 
-The Command Line Tools are installed at:
+Command Line Tools are installed at:
 ```bash
 /Library/Developer/CommandLineTools/
 ```
+
+## oh my szh
+<img src="./assets/zsh.png" width="80" alt="Oh My Zsh">
+
+zsh is a replacement for bash.
+[Oh My Zsh ](https://ohmyz.sh/#install) is an add on for zsh. It will not make you a 10x developer...but you may feel like one! It will make the terminal more user friendly in a way. I just installed it and used it. No other config needed. It has many plugins and themes which you, my future self can explore.
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+    For future reference. Example config file in examples/zshrc
 
 ## Homebrew
 <img src="./assets/homebrew.png" width="80" alt="Homebrew">
@@ -87,6 +99,7 @@ $ brew install visual-studio-code
 
 ## Git & SSH
 <img src="./assets/git.png" width="80" alt="git">
+
 This config will help to have a global setup for git.
 
 1. Create a git config file
@@ -161,6 +174,9 @@ $ ssh-add -K ~/.ssh/id_rsa
 
 4. I use Github so future me, follow the github steps to add the SSH key [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
 
+    For future reference. Example config file for git in examples/gitconfig
+    For future reference. Example config file for ssh in examples/config
+
 ## Node.js
 Installing Node globally is a *bad practice*. You should install Node using nvm (Node Version Manager) or another version manager. nvm allows you to easily switch between Node versions, which is essential when you work in different projects.
 I will install it using Homebrew.
@@ -208,7 +224,10 @@ $ node -v && npm -v
 ```
 
 ## macOS Settings
-Personal preferences on how to set up masOS. It is up to you.
+Personal preferences on how to set up macOS. It is up to you.
+## Folders & Projects
+    Versioned projects under ~/Projects folder
+    Everything else under ~/Documents folder
 ## Default Commands
     # Show path bar
     defaults write com.apple.finder ShowPathbar -bool true
@@ -216,23 +235,30 @@ Personal preferences on how to set up masOS. It is up to you.
     # Show status bar
     defaults write com.apple.finder ShowStatusBar -bool true
 ### Dock
-    Hide dock automatically.
+    Hide dock automatically
 ### Sharing
-    Change compauter name > Use something that cannot be matched to tour computed visually
+    Change computer's name > Use something that cannot be matched to you visually. Never use "Pepitos Macbook" sort of name
 ### Security
     Security & Privacy > General > Require password immediately after sleep or screen saver begins.
+
+<img src="./assets/lock.png" width="300" alt="lock">
+
     Security & Privacy > FileVault > Set it to enabled.
+
+<img src="./assets/vault.png" width="300" alt="vault">
+
     iCloud > I do not use iCloud.
     Users & Groups > Setup a password if you did not setup one during installation.
 ### System
-    Dock > Automatically hide and show the Dock
     Keyboard > Key Repeat > Fast (all the way to the right)
     Keyboard > Delay Until Repeat > Short (all the way to the right)
+
+<img src="./assets/keyboard.png" width="300" alt="keyboard">
+
     Keyboard > Text > Disable "Correct spelling automatically"
     Keyboard > Text > Disable "Capitalize words automatically"
     Keyboard > Text > Disable "Add period with double-space"
     Trackpad > Enable "Tap to click"
-
 ## App Settings
 ### Visual Studio Code
     # Path
@@ -251,6 +277,16 @@ Personal preferences on how to set up masOS. It is up to you.
     # Theme
     Visual Studio Dark Theme
 
+
+## TO DO
+- [x] Upload an initial draft
+- [ ] Give each item a why
+- [ ] Give each item an alternative
+- [ ] Draft a process to review the guide so it does not become obsolete
+- [ ] Translate to Spanish
+
+## Author
+@dariospace
 ## Contributing
 Found mistakes? Improvements? Caveats? Outdated commands? Let me know with a pull request.
 ## License

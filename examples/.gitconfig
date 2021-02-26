@@ -1,0 +1,28 @@
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(orange)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+
+[color]
+  ui = auto
+[user]
+	name = Name Name
+	email = useremail
+[github]
+  user   = username
+[alias]
+  a      = add
+  cm     = commit -m
+  s      = status
+[core]
+	excludesfile = /Users/spaceman/.gitignore
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[pull]
+	ff = only
