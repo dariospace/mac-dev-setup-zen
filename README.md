@@ -68,6 +68,78 @@ brew install visual-studio-code
 - Postico is a GUI to manage postgres DB
 - Visual Studio Code for JAMPP development
 
+## Git && SSH
+1. Create a git config file
+2. Create a SSH config file
+3. Generate SSH key
+4. Set it up in github (or another provider)
+
+1. Create a git config file
+
+```
+$ touch ~/.gitconfig # Creates the config file
+$ open ~/.gitconfig  # Opens the config file
+```
+
+Add this to the git config file to set up some shortcuts and defaults
+```text
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(orange)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+
+[color]
+  ui = auto
+[user]
+	name = My Name
+	email = email@stuff.com
+[github]
+  user   = username
+[alias]
+  a      = add
+  cm     = commit -m
+  s      = status
+[core]
+	excludesfile = /Users/user/.gitignore
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[pull]
+	ff = only
+```
+
+2. Create a SSH config file
+```bash
+$ mkdir ~/.ssh
+$ touch ~/.ssh/config # Creates the config file
+$ open ~/.ssh/config  # Opens the config file
+```
+
+Add this to the config file. Save and close.
+```  
+ Host *
+    AddKeysToAgent yes
+    UseKeychain no
+    IdentityFile ~/.ssh/id_rsa
+```
+
+Generate a SSH key. If you are not sharing the key set the passphrase to none. Leave the key with default name (id_rsa)
+```bash
+$ ssh-keygen -t rsa -b 4096 -C "email@example.com"
+```
+
+Add the SSH key 
+```bash
+$ ssh-add -K ~/.ssh/id_rsa
+```
+
+4. I use Github so future me, follow the github steps to add the SSH key [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
+
 ## Node.js
 Installing Node globally is a *bad practice*. You should install Node using nvm (Node Version Manager) or another version manager. nvm allows you to easily switch between Node versions, which is essential when you work in different projects. 
 I will install it using Homebrew.
@@ -103,7 +175,7 @@ $ echo $NVM_DIR
 /Users/spaceman/.nvm
 ```
 
-Tnstall latest node stable version
+Install latest node stable version
 ```
 nvm install node
 ```
