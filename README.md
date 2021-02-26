@@ -124,7 +124,7 @@ Add this to the git config file to set up some shortcuts and defaults
 ```bash
 $ mkdir ~/.ssh
 $ touch ~/.ssh/config # Creates the config file
-$ open ~/.ssh/config  # Opens the config file
+$ open  ~/.ssh/config  # Opens the config file
 ```
 
 Add this to the config file. Save and close.
