@@ -10,11 +10,16 @@ I started with the setup.
 ---
 
 ## I realized I needed something simpler
-
 I meditate on a daily basis and I practice minimalism. Use and keep only what you need at a certain time.
 
 ## I created this guide to setup a macOS Zen Development Environment which can grow and shrink as needed
-This guide is here to help my future self in case I wipe my computer or buy a new one and to help others with a similar approach. 
+Goal: This guide is here to help my future self in case I wipe my computer or buy a new one and to help others with a similar approach. 
+
+Primitives:
+- Having a maintainable guide to install a mac development environment in a new or wiped machine without thinking nor searching in Google for solutions
+- Being able to install / uninstall anything without globals nor affecting Projects
+- Avoiding to install any app that can be used in the browser: slack, spotify, gmail, google drive, etc ***unless***:
+- Helping to create sustainable productivity: notion
 
 ## Getting Started
 Plug in your brand new mac, select your language, time zone, Apple ID, and so on. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
@@ -68,7 +73,9 @@ brew install visual-studio-code
 - Postico is a GUI to manage postgres DB
 - Visual Studio Code for JAMPP development
 
-## Git && SSH
+## Git & SSH
+This config will help to have a global setup for git.
+
 1. Create a git config file
 2. Create a SSH config file
 3. Generate SSH key
