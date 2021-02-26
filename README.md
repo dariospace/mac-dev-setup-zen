@@ -102,7 +102,7 @@ Add this to the git config file to set up some shortcuts and defaults
   ui = auto
 [user]
 	name = My Name
-	email = email@stuff.com
+	email = email@my.me
 [github]
   user   = username
 [alias]
