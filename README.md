@@ -59,6 +59,7 @@ brew install firefox
 brew install google-chrome 
 brew install rectangle 
 brew install phpstorm
+brew install local
 brew install postgres 
 brew install postico 
 brew install visual-studio-code
@@ -69,6 +70,7 @@ brew install visual-studio-code
 - Chrome for Development
 - Rectangle for window management using keyboard shortcuts
 - Phpstorm for PHP/Wordpress development
+- Local by Flywheel for Wordpress development
 - Postgres
 - Postico is a GUI to manage postgres DB
 - Visual Studio Code for JAMPP development
@@ -88,7 +90,8 @@ $ touch ~/.gitconfig # Creates the config file
 $ open ~/.gitconfig  # Opens the config file
 ```
 
-Add this to the git config file to set up some shortcuts and defaults
+Add this to the git config file to set up some shortcuts and defaults. 
+I have set my email address in github to be private so in the email field it should be set the noreply github email alias. More info [here](https://github.com/dwyl/dev-setup/issues/22)
 ```text
 [alias]
   # Show verbose output about tags, branches or remotes
