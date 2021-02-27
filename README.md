@@ -26,10 +26,10 @@ Primitives:
 ## Screenshots
 <img src="./assets/desktop.png" width="800" alt="macOS"><img src="./assets/finder.png" width="800" alt="macOS">
 
-
 ## Getting Started
 Plug in your new or wiped computer. Follow the installation process. The first thing you should do is update macOS to get the latest security updates and patches. Right now I am on Catalina and did not update to Big Sur yet.
 ## Command Line Tools
+The Command Line Tool package gives Mac terminal users many commonly used tools.
 ```bash
 $ xcode-select --install
 ```
@@ -39,7 +39,7 @@ Command Line Tools are installed at:
 /Library/Developer/CommandLineTools/
 ```
 
-## oh my szh
+## oh my zsh
 <img src="./assets/zsh.png" width="80" alt="Oh My Zsh">
 
 zsh is a replacement for bash.
@@ -59,16 +59,24 @@ $ bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/m
 ```
 
 ## Tools
-I will install git, github cli yarn and make with homebrew.
+I will install git, github cli yarn and make and wget with homebrew.
 
 ```bash
 $ brew install \
   git \
   gh \
   yarn \
-  make
+  make \
+  wget
 ```
 
+## zsh autosuggestions
+I found this plugin for zsh super useful and intuitive. It suggests commands as you type based on history and completions.
+```bash
+$ brew install zsh-autosuggestions
+$ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Reload the terminal or use source ~/.zshrc to apply changes
+```
 ## Apps
 Must use apps for my development workflow.
 
@@ -101,6 +109,7 @@ $ brew install visual-studio-code
 <img src="./assets/git.png" width="80" alt="git">
 
 This config will help to have a global setup for git.
+On August 2021, Github will not allow using username/password to login so you will need SSH access.
 
 1. Create a git config file
 2. Create a SSH config file
@@ -172,7 +181,7 @@ Add the SSH key
 $ ssh-add -K ~/.ssh/id_rsa
 ```
 
-4. I use Github so future me, follow the github steps to add the SSH key [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
+4. I use Github so, future me, follow the github steps to add the SSH key [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
 
     For future reference. Example config file for git in examples/gitconfig
     For future reference. Example config file for ssh in examples/config
@@ -201,12 +210,9 @@ Add nvm config
 ```bash
 $ export NVM_DIR=~/.nvm
 $ source $(brew --prefix nvm)/nvm.sh
+# Reload the terminal to apply changes
 ```
-
-***Close the terminal and reopen it to reload config***
-
 Echoing $NVM_DIR should now return your NVM directory
-
 ```bash
 $ echo $NVM_DIR
 /Users/username/.nvm
